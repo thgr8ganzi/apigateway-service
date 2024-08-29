@@ -68,12 +68,17 @@ spring:
                 baseMessage: Hi, There
                 preLogger: true
                 postLogger: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, trace
+        include: refresh, health, beans, httptrace, busrefresh
 
 #token:
 #  expiration_time: 86400000
